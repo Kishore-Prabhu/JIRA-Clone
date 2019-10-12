@@ -59,7 +59,6 @@ class Dashboard extends Component {
             })
         }
         // return <Button primary>Create New Project</Button>;
-        return this.conditionallyRender(<CreateProject/>);
     }
 
     renderAllUsers() {
@@ -73,9 +72,6 @@ class Dashboard extends Component {
                     </List.Content>
                 </List.Item>)
         }
-
-        // return this.conditionallyRender(<Button primary >Create New User</Button>);
-        return this.conditionallyRender(<CreateUser/>);
         
     }
 
@@ -105,7 +101,7 @@ class Dashboard extends Component {
 
         return (
             <div style={{ height: '100vh' }}>
-                <SidebarMenu {...this.props}/>
+                <SidebarMenu />
                 <Grid columns={3} style={{ marginLeft: '12em' }}>
                     <Grid.Row>
                         <Transition visible={this.state.visible} animation='scale' duration={500}>
@@ -128,6 +124,7 @@ class Dashboard extends Component {
                                     <Card.Description>List of Projects Under Development</Card.Description>
                                     <List divided relaxed style={{ overflowY: 'scroll', height: '150px' }}>
                                         {this.renderProjects()}
+                                        {this.conditionallyRender(<CreateProject/>)}
                                     </List>
                                 </Card.Content>
                             </Card>
@@ -140,6 +137,7 @@ class Dashboard extends Component {
                                     <Card.Description>List of Users</Card.Description>
                                     <List divided relaxed style={{ overflowY: 'scroll', height: '150px' }}>
                                         {this.renderAllUsers()}
+                                        {this.conditionallyRender(<CreateUser/>)}
                                     </List>
                                 </Card.Content>
                             </Card>

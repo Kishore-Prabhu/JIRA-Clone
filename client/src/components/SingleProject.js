@@ -124,7 +124,7 @@ class SingleProject extends Component{
         const projectId = this.props.match.params.projectId
         return(
             <div style={{height:'100vh'}}>
-                <SidebarMenu {...this.props}/>
+                <SidebarMenu />
                 <div style={{marginLeft:'10em',marginTop:'2em'}}>
                 <Header as="h2">{this.state.projectTitle}</Header>
                 {this.renderSingleProject()}

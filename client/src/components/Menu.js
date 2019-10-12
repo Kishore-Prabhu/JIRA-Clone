@@ -14,13 +14,13 @@ class SidebarMenu extends Component {
                         Home
                     </Menu.Item>
                 </Link>
-               {this.props.user && this.props.user.isAdmin && <Link to="/project" onClick={console.log("Tasks")}>
+               {<Link to="/project" onClick={console.log("Tasks")}>
                     <Menu.Item name='tasks'>
                         <Icon name='tasks' />
                         Projects
                     </Menu.Item>
                 </Link>}
-               {this.props.user && this.props.user.isAdmin && <Link to="/users" onClick={console.log("Users")}>
+               { <Link to="/users" onClick={console.log("Users")}>
                     <Menu.Item name='user'>
                         <Icon name='user' />
                         Users

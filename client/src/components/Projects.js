@@ -50,7 +50,7 @@ class Projects extends Component{
     render(){
         return(
             <div style={{height:'100vh'}}>
-                <SidebarMenu {...this.props}/>
+                <SidebarMenu />
                 <div style={{marginLeft:'10em',marginTop:'2em'}}>
                     <Header as="h2">Projects</Header>
                     {this.conditionallyRender(<CreateProject/>)}
