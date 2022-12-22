@@ -21,7 +21,7 @@
     "debug": "~2.6.3",
     "express": "~4.15.2",
     "jade": "~1.11.0",
-    "jsonwebtoken": "^8.1.0",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.0.0-rc0",
     "nodemon": "^1.14.6",
     "web-push": "^3.4.0"
